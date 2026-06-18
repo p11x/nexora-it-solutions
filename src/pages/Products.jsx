@@ -46,7 +46,7 @@ export default function Products() {
           <div className="grid md:grid-cols-2 gap-6">
             {filtered.map((product, i) => (
               <ScrollReveal key={product.name} direction="up" delay={i * 0.1}>
-                <GlowCard glowColor="#6366f1" className="h-full flex flex-col">
+                <GlowCard glowColor="#4F46E5" className="h-full flex flex-col">
                   <div className="h-1.5 rounded-t-xl bg-gradient-to-r from-accent-indigo via-accent-violet to-accent-cyan mb-6 -mx-6 -mt-6 px-6" />
                   <div className="flex items-start justify-between mb-4">
                     <div>

@@ -26,7 +26,7 @@ export default function Services() {
               const Icon = iconMap[op.icon] || Search
               return (
                 <ScrollReveal key={op.title} direction="up" delay={i * 0.1}>
-                  <GlowCard glowColor="#6366f1" className="h-full">
+                  <GlowCard glowColor="#4F46E5" className="h-full">
                     <div className="w-12 h-12 rounded-xl bg-accent-indigo/15 flex items-center justify-center mb-4">
                       <Icon className="w-6 h-6 text-accent-indigo" />
                     </div>

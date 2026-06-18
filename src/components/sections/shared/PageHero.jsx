@@ -4,8 +4,12 @@ export function PageHero({ title, subtitle, badge }) {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       <div className="absolute inset-0 dot-grid-bg opacity-20" />
-      <div className="absolute top-20 left-1/4 w-[500px] h-[500px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle, #6366f1 0%, transparent 70%)', filter: 'blur(100px)' }} />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(circle, #06b6d4 0%, transparent 70%)', filter: 'blur(80px)' }} />
+      <div
+        className="absolute inset-0"
+        style={{ background: 'linear-gradient(135deg, #E8EEFF 0%, #F0F4FF 100%)' }}
+      />
+      <div className="absolute top-20 left-1/4 w-[500px] h-[500px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(100px)' }} />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(circle, rgba(8,145,178,0.12) 0%, transparent 70%)', filter: 'blur(80px)' }} />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

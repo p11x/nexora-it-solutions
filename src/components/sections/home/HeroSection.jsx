@@ -44,7 +44,7 @@ export function HeroSection() {
             </motion.h1>
 
             <motion.p variants={itemVariants} className="text-text-secondary max-w-2xl text-lg mb-8">
-              Nexora IT Solutions delivers enterprise-grade cloud architecture, cybersecurity, and AI-powered systems that scale with your ambition.
+              Viprove Infotech delivers enterprise-grade cloud architecture, cybersecurity, and AI-powered systems that scale with your ambition.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">
@@ -96,17 +96,17 @@ function Orbs() {
       <div
         className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full opacity-15"
         style={{
-          background: 'radial-gradient(circle, #6366f1 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)',
           animation: 'float 6s ease-in-out infinite',
-          filter: 'blur(80px)',
+          filter: 'blur(600px)',
         }}
       />
       <div
         className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-15"
         style={{
-          background: 'radial-gradient(circle, #06b6d4 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(8,145,178,0.10) 0%, transparent 70%)',
           animation: 'float 6s ease-in-out infinite 2s',
-          filter: 'blur(60px)',
+          filter: 'blur(400px)',
         }}
       />
     </div>
@@ -142,15 +142,15 @@ function FloatCard() {
         ))}
       </div>
       <div className="mt-6 pt-4 border-t border-border">
-        <svg viewBox="0 0 200 60" className="w-full h-12">
-          <path
-            d="M0,45 Q25,35 50,40 T100,25 T150,35 T200,15"
-            fill="none"
-            stroke="#6366f1"
-            strokeWidth="2"
-          />
-          <circle cx="200" cy="15" r="4" fill="#6366f1" />
-        </svg>
+<svg viewBox="0 0 200 60" className="w-full h-12">
+           <path
+             d="M0,45 Q25,35 50,40 T100,25 T150,35 T200,15"
+             fill="none"
+             stroke="#4F46E5"
+             strokeWidth="2"
+           />
+           <circle cx="200" cy="15" r="4" fill="#4F46E5" />
+         </svg>
       </div>
     </motion.div>
   )

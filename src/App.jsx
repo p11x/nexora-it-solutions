@@ -1,8 +1,10 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
+import ProtectedRoute from './components/auth/ProtectedRoute'
+import AdminRoute from './components/auth/AdminRoute'
 
 const Home = lazy(() => import('./pages/Home'))
 const Services = lazy(() => import('./pages/Services'))
@@ -11,6 +13,11 @@ const Operations = lazy(() => import('./pages/Operations'))
 const About = lazy(() => import('./pages/About'))
 const Contact = lazy(() => import('./pages/Contact'))
 const NotFound = lazy(() => import('./pages/NotFound'))
+
+const LoginPage = lazy(() => import('./pages/auth/LoginPage'))
+const AuthCallback = lazy(() => import('./pages/auth/AuthCallback'))
+const AdminLayout = lazy(() => import('./pages/admin/AdminLayout'))
+const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'))
 
 function PageTransition({ children }) {
   return (
@@ -62,6 +69,16 @@ export default function App() {
               <Route path="/operations" element={<PageTransition><Operations /></PageTransition>} />
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />
               <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+              <Route path="/login" element={<PageTransition><LoginPage /></PageTransition>} />
+              <Route path="/auth/callback" element={<PageTransition><AuthCallback /></PageTransition>} />
+              <Route path="/admin" element={
+                <AdminRoute>
+                  <AdminLayout />
+                </AdminRoute>
+              }>
+                <Route index element={<Navigate to="dashboard" replace />} />
+                <Route path="dashboard" element={<AdminDashboard />} />
+              </Route>
               <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
             </Routes>
           </AnimatePresence>

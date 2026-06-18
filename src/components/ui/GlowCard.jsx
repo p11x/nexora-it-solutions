@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 
-export function GlowCard({ children, glowColor = '#6366f1', className = '', ...props }) {
+export function GlowCard({ children, glowColor = '#4F46E5', className = '', ...props }) {
   const cardRef = useRef(null)
 
   return (
@@ -14,10 +14,10 @@ export function GlowCard({ children, glowColor = '#6366f1', className = '', ...p
         const rect = e.currentTarget.getBoundingClientRect()
         const x = e.clientX - rect.left
         const y = e.clientY - rect.top
-        e.currentTarget.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${glowColor}15, transparent 40%), rgba(13,17,23,0.8)`
+        e.currentTarget.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${glowColor}15, transparent 40%), rgba(255,255,255,0.75)`
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = 'rgba(13,17,23,0.8)'
+        e.currentTarget.style.background = 'rgba(255,255,255,0.75)'
       }}
       {...props}
     >

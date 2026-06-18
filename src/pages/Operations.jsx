@@ -23,7 +23,7 @@ export default function Operations() {
       <section className="section-padding relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <SectionHeader eyebrow="Our Process" title="The Nexora Way" subtitle="A structured approach refined over 500+ successful projects." centered />
+            <SectionHeader eyebrow="Our Process" title="The Viprove Way" subtitle="A structured approach refined over 500+ successful projects." centered />
           </ScrollReveal>
 
           <div className="space-y-6">
@@ -31,7 +31,7 @@ export default function Operations() {
               const Icon = iconMap[op.icon]
               return (
                 <ScrollReveal key={op.title} direction="left" delay={i * 0.1}>
-                  <GlowCard glowColor="#6366f1" className="flex items-start gap-6">
+                  <GlowCard glowColor="#4F46E5" className="flex items-start gap-6">
                     <div className="flex-shrink-0">
                       <div className="w-14 h-14 rounded-xl bg-accent-indigo/15 flex items-center justify-center">
                         <Icon className="w-7 h-7 text-accent-indigo" />
@@ -52,7 +52,7 @@ export default function Operations() {
         </div>
       </section>
 
-      <section className="py-20 bg-bg-surface border-y border-border">
+      <section className="py-20 bg-white border-y border-[rgba(79,70,229,0.12)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeader eyebrow="SLA" title="Our Commitments" subtitle="Industry-leading guarantees backed by real infrastructure." centered />
@@ -62,7 +62,7 @@ export default function Operations() {
               const Icon = m.Icon
               return (
                 <ScrollReveal key={m.label} direction="up" delay={i * 0.1}>
-                  <GlowCard glowColor="#6366f1" className="text-center p-6">
+                  <GlowCard glowColor="#4F46E5" className="text-center p-6">
                     <Icon className="w-8 h-8 text-accent-indigo mx-auto mb-3" />
                     <div className="font-display text-3xl font-bold text-text-primary mb-1">
                       <AnimatedCounter value={m.value} suffix={m.suffix} prefix={m.prefix || ''} />

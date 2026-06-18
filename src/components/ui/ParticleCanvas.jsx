@@ -55,7 +55,7 @@ export function ParticleCanvas() {
 
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(99, 102, 241, ${p.opacity})`
+        ctx.fillStyle = `rgba(79, 70, 229, ${p.opacity})`
         ctx.fill()
 
         particles.forEach((p2, j) => {
@@ -65,7 +65,7 @@ export function ParticleCanvas() {
             ctx.beginPath()
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(p2.x, p2.y)
-            ctx.strokeStyle = `rgba(99, 102, 241, ${0.15 * (1 - d / 120)})`
+            ctx.strokeStyle = `rgba(79, 70, 229, ${0.2 * (1 - d / 120)})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }

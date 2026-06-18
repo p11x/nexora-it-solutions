@@ -7,15 +7,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Toaster } from 'react-hot-toast'
 import './index.css'
 import App from './App.jsx'
+import { AuthProvider } from './context/AuthContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <AnimatePresence mode="wait">
+      <AuthProvider>
         <App />
-      </AnimatePresence>
+      </AuthProvider>
       <Toaster
         position="bottom-right"
         toastOptions={{

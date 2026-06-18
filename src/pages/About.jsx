@@ -5,7 +5,7 @@ import { team } from '../data/content'
 export default function About() {
   return (
     <div>
-      <PageHero title="About Nexora" subtitle="Pioneering enterprise technology solutions since 2012." />
+      <PageHero title="About Viprove" subtitle="Pioneering enterprise technology solutions since 2012." />
 
       <section className="section-padding relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +27,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-bg-surface border-y border-border">
+      <section className="py-20 bg-white border-y border-[rgba(79,70,229,0.12)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeader eyebrow="Leadership" title="Meet the Team" subtitle="Experienced leaders driving innovation." centered />

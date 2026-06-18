@@ -6,7 +6,7 @@ export function CtaSection() {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%)',
+          background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #0891B2 100%)',
           backgroundSize: '200% 200%',
           animation: 'gradient-shift 8s ease infinite',
         }}
@@ -23,7 +23,7 @@ export function CtaSection() {
           Ready to Build the Future?
         </h2>
         <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-          Let's discuss your project and explore how Nexora can help you achieve your technology goals.
+          Let's discuss your project and explore how Viprove can help you achieve your technology goals.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a href="/contact">

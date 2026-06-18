@@ -1,5 +1,9 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ScrollReveal } from '../ui/ScrollReveal'
+import { supabase } from '../../lib/supabase'
+import { toast } from 'react-hot-toast'
+import AnimatedLogo from '../ui/AnimatedLogo'
 
 const socialLinks = [
   {
@@ -40,19 +44,39 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault()
+    if (!newsletterEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      toast.error('Enter a valid email')
+      return
+    }
+
+    const { error } = await supabase
+      .from('newsletter_subscribers')
+      .insert([{ email: newsletterEmail }])
+
+    if (error?.code === '23505') {
+      toast('You are already subscribed!', { icon: 'ℹ️' })
+    } else if (error) {
+      toast.error('Subscription failed. Try again.')
+    } else {
+      toast.success('Subscribed! Welcome to Viprove Infotech updates.')
+      setNewsletterEmail('')
+    }
+  }
+
   return (
-    <footer className="relative bg-bg-surface border-t border-border overflow-hidden">
+    <footer className="relative bg-[#E8EEFF] border-t border-[rgba(79,70,229,0.15)] overflow-hidden">
       <div className="absolute inset-0 dot-grid-bg opacity-10" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <ScrollReveal>
             <div className="lg:col-span-1">
-              <Link to="/" className="inline-flex items-center gap-2 mb-4">
-                <span className="font-display font-bold text-text-primary text-xl">NEXORA</span>
-                <span className="text-text-muted text-xs">IT Solutions</span>
-              </Link>
-              <p className="text-text-secondary text-sm leading-relaxed mb-6 max-w-xs">
+              <AnimatedLogo size="md" showText={true} linkTo="/" />
+              <p className="text-text-secondary text-sm leading-relaxed mb-6 max-w-xs pt-2">
                 Engineering tomorrow's infrastructure today. Empowering enterprises with cutting-edge cloud, security, and AI solutions.
               </p>
               <div className="flex gap-4">
@@ -110,33 +134,35 @@ export function Footer() {
             <div>
               <h4 className="font-display font-semibold text-text-primary mb-4">Contact</h4>
               <ul className="space-y-3 text-sm text-text-secondary">
-                <li>                 HITEC City, Hyderabad, Telangana - 500081, India</li>
+                <li>HITEC City, Hyderabad, Telangana - 500081, India</li>
                 <li>
-                  <a href="mailto:info@nexora.io" className="hover:text-accent-indigo transition-colors">
-                    info@nexora.in
+                  <a href="mailto:info@viprove.in" className="hover:text-accent-indigo transition-colors">
+                    info@viprove.in
                   </a>
                 </li>
                 <li>+1 (555) 123-4567</li>
               </ul>
-              <div className="mt-4 flex gap-2">
+              <form onSubmit={handleNewsletterSubmit} className="mt-4 flex gap-2">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 bg-bg-elevated border border-border rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-indigo transition-colors"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  className="flex-1 bg-white border border-[rgba(79,70,229,0.2)] rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-indigo transition-colors"
                 />
                 <button className="px-4 py-2 bg-accent-indigo hover:bg-indigo-400 text-white text-sm rounded-lg transition-colors">
                   Subscribe
                 </button>
-              </div>
+              </form>
             </div>
           </ScrollReveal>
         </div>
       </div>
 
-      <div className="relative border-t border-border">
+      <div className="relative border-t border-[rgba(79,70,229,0.15)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-text-muted text-sm">
-            © 2024 Nexora IT Solutions. All rights reserved.
+            © 2024 Viprove Infotech. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-text-muted">
             <Link to="#" className="hover:text-accent-indigo transition-colors">Privacy Policy</Link>

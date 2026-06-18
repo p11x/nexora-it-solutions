@@ -8,7 +8,7 @@ export function TechStack() {
   const row2 = [...stack.reverse(), ...stack.reverse()]
 
   const TechPill = ({ name }) => (
-    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bg-elevated border border-border text-primary text-sm font-mono whitespace-nowrap">
+    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E8EEFF] border border-[rgba(79,70,229,0.2)] text-[#334155] text-sm font-mono whitespace-nowrap">
       <span className="w-2 h-2 rounded-full bg-accent-indigo" />
       {name}
     </span>

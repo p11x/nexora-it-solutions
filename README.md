@@ -1,4 +1,4 @@
-# 🚀 Nexora IT Solutions
+# 🚀 Viprove Infotech
 
 **Engineering Tomorrow's Infrastructure, Today**
 
@@ -99,7 +99,7 @@ Sections (in order):
 5. **Global Delivery Map** — SVG world map with animated pulse pings (USA, UK, India, Singapore)
 
 ### About `/about`
-1. **PageHero** — "About Nexora" with founding year
+1. **PageHero** — "About Viprove" with founding year
 2. **Mission & Vision** — Quote + two info cards
 3. **Story Timeline** — 5 milestones from 2012 → 2024
 4. **Core Values** — 2×3 icon grid (Innovation, Integrity, Excellence, Collaboration, Security, Impact)
@@ -165,7 +165,7 @@ All font sizes use `clamp()` for fluid scaling between breakpoints.
 ## ♿ Accessibility
 
 - ✅ All interactive elements keyboard focusable
-- ✅ Visible focus ring: `2px solid #6366f1, offset 2px`
+- ✅ Visible focus ring: `2px solid #4F46E5, offset 2px`
 - ✅ Decorative icons marked `aria-hidden="true"`
 - ✅ Color contrast ratio ≥ 4.5:1 for all text
 - ✅ Skip-to-content link at top of page
@@ -178,12 +178,12 @@ All font sizes use `clamp()` for fluid scaling between breakpoints.
 
 | Type | Detail |
 |------|--------|
-| 📧 Email | info@nexora.in |
+| 📧 Email | info@viprove.in |
 | 📞 Phone | +91 40 6800 1234 |
 | 📍 Address | Plot No. 12, HITEC City, Madhapur, Hyderabad, Telangana – 500081 |
 | 🕘 Weekdays | Mon–Fri: 9:00 AM – 6:30 PM IST |
 | 🕙 Saturday | 10:00 AM – 2:00 PM IST |
-| 🌐 Website | [nexora.in](https://nexora.in) |
+| 🌐 Website | [viprove.in](https://viprove.in) |
 
 ---
 
@@ -212,7 +212,7 @@ See the `LICENSE` file for details.
 
 Made with ❤️ in Hyderabad, India
 
-**Nexora IT Solutions** — Engineering Tomorrow's Infrastructure, Today
+**Viprove Infotech** — Engineering Tomorrow's Infrastructure, Today
 
 ⭐ Star this repo if you found it useful!
 
